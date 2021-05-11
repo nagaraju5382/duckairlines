@@ -1,0 +1,122 @@
+git config --global user.email "yours.nagaraju@gmail.com" 
+  git config --global user.name "nagaraju5382"
+
+How to update user.email,user.name for any specific project?
+You need to use git config global user.email and git config global user.name ( excluding -- in global scope).
+
+what are the three stages of a file?
+committed, working directory
+which git cmd is used to move a file from staging area to the .git directory?
+git commit
+which git reset command moves changes from committed to the working directory?
+
+git reset --mixed
+
+
+
+to list all git configuration options
+>git config --list
+
+> git config user.name
+
+PORCELIN commands -- most used commands
+
+HOW TO PUSH PROJECT TO GITHUB REPOSITORY FROM GIT COMMAND PROMPT
+
+Inside a project folder
+>git init
+Initializing empty Git repository /users/gunjinag/projectfolder/.git/
+
+.git is hidden folder.
+
+>git status
+>git add .
+>git commit -m "Initial commit"
+>git remote add origin https://github.com/nagaraju5382/duckairlines.git
+>git push -u origin master
+
+
+
+> git status --short
+
+Git diff -staged
+
+1. What changes have i staged that are ready to be committed?
+which git command shows you the changes you've staged that will go into your next commit?
+
+git diff --staged --no-names
+
+2. what changes which are not in staged state?
+
+git diff
+
+git commit -a -m ""
+
+-a Automatically commit by skipping staging area.
+
+>git log 
+
+(reverse chronological order )
+
+> limit the number of commits to logs
+
+>git log -1
+
+returns only 1 latest commit
+
+>git log --oneline
+
+>git log --stat
+
+> git log --patch
+
+
+To remove file
+
+>git rm vendor.txt
+
+>git rm --cached irish_coffee.txt
+( remove from frm repository but not frm local repo)
+
+rename file:
+
+git mv readme.md readme
+
+git-school.github.io/visulizing-git
+
+git push origin master
+
+
+Branch:
+
+you are currently in master branch and you wanted to create a new branch on top of master branch.
+
+>git checkout -b new_branch it will create new_branch and your will see branch name in git bash command prompt.
+
+you have made some changes in new_branch and wanted to checkout master bracch, but you wanted to save your local changes on new_branch then you need to use stash.
+
+>git checkout master
+Error: The following untracked working tree files would be overridden by checkout
+>git add .
+
+> git stash
+>git status
+>git stash list
+>git stash show
+>git stash pop ( to pop back into working directory)
+
+> git checkout master
+switched to branch 'master'
+our branch is up-to-date with 'origin/master'
+
+
+git rest --soft ( move changes to staging area)
+git reset --mixed (working directory)
+git reset --hard(recycle bin/trash/all changes moved to trash)
+
+
+git log --oneline
+
+
+
+
